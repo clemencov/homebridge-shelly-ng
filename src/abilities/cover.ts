@@ -63,10 +63,10 @@ export class CoverAbility extends Ability {
 
   protected initialize() {
     // abort if this cover hasn't been calibrated
-    if (this.component.pos_control !== true) {
-      this.log.warn('Only calibrated covers are supported.');
-      return;
-    }
+    // if (this.component.pos_control !== true) {
+    //   this.log.warn('Only calibrated covers are supported.');
+    //   return;
+    // }
 
     // set the initial values
     this.service

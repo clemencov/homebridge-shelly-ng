@@ -58,10 +58,10 @@ class CoverAbility extends base_1.Ability {
     }
     initialize() {
         // abort if this cover hasn't been calibrated
-        if (this.component.pos_control !== true) {
-            this.log.warn('Only calibrated covers are supported.');
-            return;
-        }
+        // if (this.component.pos_control !== true) {
+        //   this.log.warn('Only calibrated covers are supported.');
+        //   return;
+        // }
         // set the initial values
         this.service
             .setCharacteristic(this.Characteristic.PositionState, this.positionState)
