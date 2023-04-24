@@ -7,13 +7,14 @@ const names = {
   'door': 'Door',
   'window': 'Window',
   'windowCovering': 'Window Covering',
+  'garageDoorOpener': 'Garage Door Opener',
 };
 
 export class CoverAbility extends Ability {
   /**
    * @param component - The cover component to control.
    */
-  constructor(readonly component: Cover, readonly type: 'door' | 'window' | 'windowCovering' = 'window') {
+  constructor(readonly component: Cover, readonly type: 'door' | 'window' | 'windowCovering' | 'garageDoorOpener' = 'window') {
     super(
       `${names[type]} ${component.id + 1}`,
       `${type}-${component.id}`,
@@ -25,6 +26,8 @@ export class CoverAbility extends Ability {
       return this.Service.Door;
     } else if (this.type === 'windowCovering') {
       return this.Service.WindowCovering;
+    } else if (this.type === 'garageDoorOpener') {
+      return this.Service.GarageDoorOpener;
     }
     return this.Service.Window;
   }

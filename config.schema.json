@@ -185,7 +185,8 @@
                   "oneOf": [
                     { "title": "Door", "enum": [ "door" ] },
                     { "title": "Window", "enum": [ "window" ] },
-                    { "title": "Window Covering", "enum": [ "windowCovering" ] }
+                    { "title": "Window Covering", "enum": [ "windowCovering" ] },
+                    { "title": "Garage Door Opener", "enum": [ "garageDoorOpener" ] }
                   ],
                   "default": "window"
                 }

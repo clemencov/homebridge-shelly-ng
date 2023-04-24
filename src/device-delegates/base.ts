@@ -213,13 +213,15 @@ export abstract class DeviceDelegate {
     const type = typeof coverOpts.type === 'string' ? coverOpts.type.toLowerCase() : 'window';
     const isDoor = type === 'door';
     const isWindowCovering = type === 'windowcovering';
+    const isGarageDoorOpener = type === 'garagedooropener';
 
     return this.createAccessory(
       'cover',
       'Cover',
       new CoverAbility(cover, 'door').setActive(isDoor),
       new CoverAbility(cover, 'windowCovering').setActive(isWindowCovering),
-      new CoverAbility(cover, 'window').setActive(!isDoor && !isWindowCovering),
+      new CoverAbility(cover, 'garageDoorOpener').setActive(isGarageDoorOpener),
+      new CoverAbility(cover, 'window').setActive(!isDoor && !isWindowCovering && !isGarageDoorOpener),
       new PowerMeterAbility(cover),
     ).setActive(coverOpts.exclude !== true && o.active !== false);
   }

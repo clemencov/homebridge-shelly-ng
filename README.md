@@ -103,7 +103,7 @@ See below for descriptions of each configuration option.
 | `devices. switch:0-3.exclude`   | Set this option to `true` to prevent the switch with the specified index number from being added to HomeKit. |
 | `devices. switch:0-3.type`      | The type of accessory used to represent the switch with the specified index number. Available options are `"outlet"` and `"switch"` (default).
 | `devices. cover:0.exclude`      | Set this option to `true` to prevent this cover from being added to HomeKit. |
-| `devices. cover:0.type`         | Only available for devices in cover mode. The type of accessory used to represent the cover. Available options are `"door"`, `"window"` (default) and `"windowCovering"`.
+| `devices. cover:0.type`         | Only available for devices in cover mode. The type of accessory used to represent the cover. Available options are `"door"`, `"window"` (default), `"windowCovering"` and `"garageDoorOpener"`.
 | `mdns`                          | Settings for the mDNS device discovery service. |
 | `mdns. enable`                  | Set this option to `false` to disable automatic device discovery using mDNS. |
 | `mdns. interface`               | The network interface to use when sending and receiving mDNS packets. You probably don't need to use this setting unless you know what you're doing. If not specified, all available network interfaces will be used. |

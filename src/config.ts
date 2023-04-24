@@ -70,7 +70,7 @@ export interface CoverOptions {
   /**
    * The type of accessory used to represent the cover.
    */
-  type?: 'door' | 'window' | 'windowCovering';
+  type?: 'door' | 'window' | 'windowCovering' | 'garageDoorOpener';
 }
 
 export interface DeviceOptions {
